@@ -1,0 +1,31 @@
+{
+  "name": "www.antoniogallo.it-nextjs",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Antonio Gallo",
+  "license": "ALL RIGHT RESERVED",
+  "devDependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.2.3",
+    "@types/next": "^7.0.6",
+    "@zeit/next-preact": "^0.1.0",
+    "@zeit/next-sass": "^1.0.1",
+    "@zeit/next-typescript": "^1.1.1",
+    "brotli-webpack-plugin": "^1.0.0",
+    "clean-webpack-plugin": "^1.0.0",
+    "http-server": "^0.11.1",
+    "next": "^7.0.2",
+    "next-compose-plugins": "^2.1.1",
+    "preact": "^8.4.2",
+    "preact-compat": "^3.18.4",
+    "recursive-copy": "^2.0.9"
+  },
+  "scripts": {
+    "dev": "next src",
+    "start": "next src",
+    "build": "next build src",
+    "export": "next export -o dist src",
+    "prod": "rm -rf node_modules/.cache build dist && next build src && next export src -o dist",
+    "prod-test": "http-server dist -p 4000 -o",
+    "deploy": "yarn run prod && ./deploy.sh"
+  }
+}
