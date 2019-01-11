@@ -19,7 +19,7 @@ const BrotliPlugin = require('brotli-webpack-plugin');
 
 module.exports = withPlugins(
 	[
-		//withPreact,
+		withPreact,
 		withTypescript,
 		withSass,
 		//withImages,
