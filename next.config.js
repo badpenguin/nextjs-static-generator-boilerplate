@@ -19,7 +19,7 @@ const BrotliPlugin = require('brotli-webpack-plugin');
 
 module.exports = withPlugins(
 	[
-		withPreact,
+		//withPreact,
 		withTypescript,
 		withSass,
 		//withImages,
@@ -48,8 +48,8 @@ module.exports = withPlugins(
 			}
 
 			// Source Map in production
-			/*if(!dev) {
-				config.devtool = 'source-map'
+			/*if (!dev) {
+				config.devtool = 'source-map';
 			}*/
 
 			var isProduction = config.mode === 'production';

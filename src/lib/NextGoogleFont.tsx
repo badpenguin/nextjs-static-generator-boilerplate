@@ -15,7 +15,8 @@ const NextGoogleFont = (props: NextGoogleFontOptions) => {
 				<link rel='preconnect' href='https://fonts.googleapis.com/'/>
 				<link rel='preconnect' href='https://ajax.googleapis.com/'/>
 			</Head>
-			<script dangerouslySetInnerHTML={{__html:`
+			<script dangerouslySetInnerHTML={{
+				__html: `
 var WebFontConfig = {
 	google: {families: [ '${props.face}' ]}
 };
@@ -27,7 +28,8 @@ var WebFontConfig = {
 	var s = document.getElementsByTagName('script')[0];
 	s.parentNode.insertBefore(wf, s);
 })();
-			`}}/>
+			`
+			}}/>
 		</React.Fragment>
 	);
 };

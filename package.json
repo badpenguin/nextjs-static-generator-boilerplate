@@ -1,9 +1,9 @@
 {
-  "name": "www.antoniogallo.it-nextjs",
+  "name": "nextjs-static-generator-boilerplate",
   "version": "1.0.0",
   "main": "index.js",
   "author": "Antonio Gallo",
-  "license": "ALL RIGHT RESERVED",
+  "license": "GPLv2",
   "devDependencies": {
     "@babel/plugin-proposal-class-properties": "^7.2.3",
     "@types/next": "^7.0.6",
@@ -15,8 +15,13 @@
     "http-server": "^0.11.1",
     "next": "^7.0.2",
     "next-compose-plugins": "^2.1.1",
+    "node-sass": "^4.11.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.1",
+    "postcss-css-variables": "^0.11.0",
     "preact": "^8.4.2",
     "preact-compat": "^3.18.4",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
     "recursive-copy": "^2.0.9"
   },
   "scripts": {

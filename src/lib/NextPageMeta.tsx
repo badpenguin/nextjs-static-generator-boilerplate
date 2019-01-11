@@ -13,12 +13,12 @@ export interface NextMetaPageOptions {
 		ogimage?: string;
 		favicon?: string;
 		manifest?: string;
-	}
+	},
+	useReact?: boolean;
 }
 
 
 const NextMetaPage = (props: NextMetaPageOptions) => {
-	//console.log('Layout', props);
 	if (!props.meta) {
 		console.error('no meta');
 	}
