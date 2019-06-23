@@ -12,3 +12,7 @@ In the provided skeleton there are 2 test pages: index and credits.
 The index page does not have any react components on client side, so it will not load any extra Javascript in production.
 
 Instead the credits page has a simple clock example and you can see clearly that the page load extra JS required by Next.JS to run the React code on the client.
+
+## Known Bugs
+
+* This works with v7 - if you upgrade to v8 there is a regression in getCssLinks() in component NextHeadWithInlineCss, i've opened an issue on https://github.com/zeit/next.js/issues/7641
