@@ -2,6 +2,7 @@ import {Head} from "next/document"
 import {readFileSync} from "fs"
 import {join} from "path"
 import React from "react";
+import fs from "fs";
 
 const exportDir = 'dist'; // I don't use "out"
 
@@ -19,7 +20,26 @@ export default class NextHeadWithInlineCss extends Head {
 		}
 
 		// Inline CSS
-		return files.filter((file: any) => /\.css$/.test(file)).map((file: any) => (
+		return files.filter((file: any) => /\.css$/.exec(file)).map((file: any) => {
+
+			const filePath = join(process.cwd(), exportDir, '_next', file);
+
+			if (!fs.existsSync(file)) {
+				console.warn('[getCssLinks] missing file', filePath);
+
+				return (
+				<link
+					key={file}
+					nonce={this.props.nonce}
+					rel="stylesheet"
+					href={`${assetPrefix}/_next/${file}`}
+					crossOrigin={this.props.crossOrigin || process.crossOrigin}
+				/>
+				);
+
+			}
+
+			return (
 			<style
 				key={file}
 				nonce={this.props.nonce}
@@ -29,7 +49,10 @@ export default class NextHeadWithInlineCss extends Head {
 				}}
 			/>
 
-		))
+		)
+			}
+		
+		)
 	}
 
 	// Disable preload stuffs

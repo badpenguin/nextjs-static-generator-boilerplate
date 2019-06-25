@@ -4,7 +4,7 @@ const webpack = require('webpack');
 const withPlugins = require("next-compose-plugins");
 const withTypescript = require('@zeit/next-typescript');
 const withSass = require('@zeit/next-sass');
-const withPreact = require('@zeit/next-preact');
+//const withPreact = require('@zeit/next-preact');
 //const withImages = require('next-images');
 //const withOptimizedImages = require('next-optimized-images');
 
@@ -19,7 +19,7 @@ const BrotliPlugin = require('brotli-webpack-plugin');
 
 module.exports = withPlugins(
 	[
-		withPreact,
+		//withPreact, //-> https://github.com/zeit/next.js/issues/7231
 		withTypescript,
 		withSass,
 		//withImages,
@@ -44,6 +44,7 @@ module.exports = withPlugins(
 		webpack: (config, {dev, isServer}) => {
 
 			if (isServer || dev) {
+				console.log('- webpack running in DEV mode');
 				return config;
 			}
 
