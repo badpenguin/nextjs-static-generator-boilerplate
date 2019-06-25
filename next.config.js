@@ -44,7 +44,7 @@ module.exports = withPlugins(
 		webpack: (config, {dev, isServer}) => {
 
 			if (isServer || dev) {
-				console.log('- webpack running in DEV mode');
+				console.log('- webpack skipped on '+ (isServer?'server':'client') + ' in mode '+ (dev?'dev':'proda') );
 				return config;
 			}
 
