@@ -17,4 +17,5 @@ Instead the credits page has a simple clock example and you can see clearly that
 
 * This works with v7 - if you upgrade to v8 there is a regression in getCssLinks() in component NextHeadWithInlineCss, i've opened an issue on https://github.com/zeit/next.js/issues/7641
 * Preact does not work with v8 - https://github.com/zeit/next.js/issues/7231
+* Also see this closed ticket https://github.com/zeit/next.js/issues/7660
 
