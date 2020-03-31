@@ -1,7 +1,9 @@
 # nextjs-static-generator-boilerplate
-A **Next.JS** boilerplate to build and **export a static website without requiring a running server**. Basically you can use Next.Js as a **static generator** removing unwanted features like extra JS files.
 
-Currently used on https://antoniogallo.it/
+This was an example on version 7, now outdated, I've moved to Stencil JS fot static websites since NextJS broked this implementation when changing from v7 to v8.
+
+
+A **Next.JS** boilerplate to build and **export a static website without requiring a running server**. Basically you can use Next.Js as a **static generator** removing unwanted features like extra JS files.
 
 For tecnically details and why i created this, please read my article on:
 * https://medium.com/@antoniogallo.it/creating-an-optimized-big-static-page-website-with-next-js-dc53e5d7f941
