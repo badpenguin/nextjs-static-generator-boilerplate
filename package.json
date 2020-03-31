@@ -13,7 +13,6 @@
     "brotli-webpack-plugin": "^1.0.0",
     "clean-webpack-plugin": "^1.0.0",
     "http-server": "^0.11.1",
-    "next": "^7.0.2",
     "next-compose-plugins": "^2.1.1",
     "node-sass": "^4.11.0",
     "optimize-css-assets-webpack-plugin": "^5.0.1",
